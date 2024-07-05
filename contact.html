@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Gardenia Restaurant</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+    <meta name="theme-color" content="#317EFB" />
+    <link rel="manifest" href="manifest.json">
+
+
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
+    <!-- ios support -->
+    <link rel="apple-touch-icon" href="icons/icon-96x96.png">
+    <meta name="apple-mobile-web-app-status-bar" content="#4ddbae">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Playfair+Display:wght@700;900&display=swap"
+        rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <script src="js/register-service-worker.js"></script>
+
+    <style>
+        .container.mt-5 {
+            margin-top: 7rem !important;
+            /* Adjusts space from the top, change '5rem' to your preference */
+        }
+
+        @media (max-width: 768px) {
+            .container.mt-5 {
+                margin-top: 4rem;
+                /* Less margin on smaller screens */
+            }
+
+}
+   /* Dark Mode Styles */
+   body.dark-mode {
+    background-color: #ffffff;
+    color: #000000;
+}
+.container-fluid.dark-mode, .collapse.dark-mode {
+    background-color: #ffffff;
+
+}
+
+.heading.dark-mode {
+color: #000000;
+    
+}
+
+.footer.dark-mode, .copyright.dark-mode {
+    background-color: #1f1f1f;
+    color: #e0e0e0;
+}
+
+.carousel-control-prev-icon.dark-mode, .carousel-control-next-icon.dark-mode {
+    background-color: #212121;
+    border: 15px solid #212121;
+}
+.dropdown-menu.dark-mode {
+    background-color: #1f1f1f;
+    color: #e0e0e0;
+}
+
+
+#darkModeToggle {
+    border-radius: 50%; /* Make the button round */
+    background-color: #ffffff; /* White background color */
+    color: #000000; /* Black text color */
+/* Optional: Black border */
+    width: 25px; /* Adjust width to make it round */
+    height: 25px; /* Adjust height to make it round */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px; /* Adjust font size as needed */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition for color change */
+}
+
+#darkModeToggle:hover {
+    background-color: #000000; /* Background color on hover */
+    color: #ffffff; /* Text color on hover */
+}
+
+</style>
+</head>
+
+<body>
+
+
+ 
+
+
+    <div class="container-fluid sticky-top">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg bg-white navbar-light py-2 py-lg-0">
+                <a href="index.html" class="navbar-brand">
+                    <img class="img-fluid" src="img/logo.png" alt="Logo">
+                </a>
+                <button type="button" class="navbar-toggler ms-auto me-0" data-bs-toggle="collapse"
+                    data-bs-target="#navbarCollapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <div class="navbar-nav ms-auto">
+                        <a href="index.html" class="nav-item nav-link ">Home</a>
+                        <a href="about.html" class="nav-item nav-link">About</a>
+                        <a href="product.html" class="nav-item nav-link">Menu</a>
+                        <a href="contact.html" class="nav-item nav-link active">Contact</a>
+                        <a href="store.html" class="nav-item nav-link" id="storeLink">Store</a>
+
+
+                        <li class="nav-item dropdown" id="userMenu" style="display: none;">
+                            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false">
+                                <span id="userEmail"></span>
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a href="#" id="logoutLink" class="dropdown-item">Logout</a>
+                            </div>
+                        </li>
+                        <li id="loginRegisterLink"><a href="register.html" class="nav-item nav-link">Login/Register</a>
+                        </li>
+
+                    </div>
+                    <button id="darkModeToggle" class="btn btn-dark ms-2">
+                        <i id="darkModeIcon" class="fas fa-sun"></i>
+                    </button>
+                </div>
+            </nav>
+        </div>
+    </div>
+
+
+    <div class="container mt-5">
+        <div class="row">
+
+            <div class="col-md-6">
+                <h2 class="heading">Contact Us</h2>
+                <form>
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Name</label>
+                        <input type="text" class="form-control" id="name" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="email" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="message" class="form-label">Message</label>
+                        <textarea class="form-control" id="message" rows="3"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
+                    <h2 class="heading">Find your location</h2>
+                    <button id="start">Get Geolocation</button>
+                    <section id="output"></section>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="bg-body-tertiary text-center">
+        <!-- Grid container -->
+        <div class="container p-4 pb-0">
+          <!-- Section: Social media -->
+          <section class="mb-4">
+            <!-- Facebook -->
+            <a
+            data-mdb-ripple-init
+              class="btn text-white btn-floating m-1"
+              style="background-color: #3b5998;"
+              href="#!"
+              role="button"
+              ><i class="fab fa-facebook-f"></i
+            ></a>
+      
+            <!-- Twitter -->
+            <a
+              data-mdb-ripple-init
+              class="btn text-white btn-floating m-1"
+              style="background-color: #55acee;"
+              href="#!"
+              role="button"
+              ><i class="fab fa-twitter"></i
+            ></a>
+      
+            <!-- Google -->
+            <a
+              data-mdb-ripple-init
+              class="btn text-white btn-floating m-1"
+              style="background-color: #dd4b39;"
+              href="#!"
+              role="button"
+              ><i class="fab fa-google"></i
+            ></a>
+      
+            <!-- Instagram -->
+            <a
+              data-mdb-ripple-init
+              class="btn text-white btn-floating m-1"
+              style="background-color: #ac2bac;"
+              href="#!"
+              role="button"
+              ><i class="fab fa-instagram"></i
+            ></a>
+      
+            <!-- Linkedin -->
+            <a
+              data-mdb-ripple-init
+              class="btn text-white btn-floating m-1"
+              style="background-color: #0082ca;"
+              href="#!"
+              role="button"
+              ><i class="fab fa-linkedin-in"></i
+            ></a>
+            <!-- Github -->
+            <a
+              data-mdb-ripple-init
+              class="btn text-white btn-floating m-1"
+              style="background-color: #333333;"
+              href="#!"
+              role="button"
+              ><i class="fab fa-github"></i
+            ></a>
+          </section>
+          <!-- Section: Social media -->
+        </div>
+        <!-- Grid container -->
+      
+        <!-- Copyright -->
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.05);">
+          © 2020 Copyright:
+          <a class="text-body" href="https://mdbootstrap.com/">Gardenia.com</a>
+        </div>
+        <!-- Copyright -->
+      </footer>
+
+
+
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import {
+            initializeApp
+        } from "https://www.gstatic.com/firebasejs/10.3.0/firebase-app.js";
+        import {
+            getDatabase,
+            set,
+            ref,
+            update
+        } from "https://www.gstatic.com/firebasejs/10.3.0/firebase-database.js";
+        import {
+            getAnalytics
+        } from "https://www.gstatic.com/firebasejs/10.3.0/firebase-analytics.js";
+        import {
+            getAuth,
+            createUserWithEmailAndPassword,
+            signInWithEmailAndPassword,
+            onAuthStateChanged,
+            signOut
+        } from "https://www.gstatic.com/firebasejs/10.3.0/firebase-auth.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        const firebaseConfig = {
+            apiKey: "AIzaSyDWpFtYvSHCdbk6exArZUzT0HDiTdGlVDM",
+            authDomain: "gardenia-c3f64.firebaseapp.com",
+            projectId: "gardenia-c3f64",
+            storageBucket: "gardenia-c3f64.appspot.com",
+            messagingSenderId: "187788474716",
+            appId: "1:187788474716:web:626f5a3002aa672e61e999"
+        };
+
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+        const database = getDatabase(app);
+        const auth = getAuth();
+    </script>
+
+    <script>
+        const startBtn = document.getElementById("start");
+        const output = document.getElementById("output");
+
+
+        startBtn.addEventListener("click", start);
+
+        function start() {
+            if (!navigator.geolocation) {
+                output.innerHTML = "The geolocation feature is not available in your browser.";
+            } else {
+                output.innerHTML = "Attempting to locate you&hellip;";
+                navigator.geolocation.getCurrentPosition(gotPosition, gotError);
+            }
+        }
+
+        function gotPosition(position) {
+            if (position == null) {
+                console.log("Null position");
+                return;
+            }
+            console.log(position);
+
+            output.innerHTML = `
+        <p>Your position at ${new Date(position.timestamp).toUTCString()} was (${position.coords.latitude}, ${position.coords.longitude})</p>
+        <p>This is accurate to ${position.coords.accuracy}m.</p>
+        <iframe src="${mapsUrl(position.coords.latitude, position.coords.longitude)}"></iframe>
+      `;
+        }
+
+        function gotError(error) {
+            switch (error.code) {
+                case error.PERMISSION_DENIED:
+                    output.innerHTML = "You have declined permission to use geolocation.";
+                    break;
+                case error.POSITION_UNAVAILABLE:
+                    output.innerHTML = "Unable to determine your position using geolocation.";
+                    break;
+                case error.TIMEOUT:
+                    output.innerHTML =
+                        "Unable to determine your position using geolocation within a given duration of time.";
+                    break;
+                case error.UNKNOWN_ERROR:
+                    output.innerHTML = "An unknown error occurred when using geolocation.";
+                    break;
+            }
+        }
+
+        function mapsUrl(lat, lng) {
+            // On a real page, you'd use the officially supported Google Maps Embed API which requires an API Key: https://developers.google.com/maps/documentation/embed/guide
+            return `https://maps.google.com/maps?q=${lat},${lng}&Roadmap&z=16&ie=UTF8&iwloc=&output=embed`;
+        }
+    </script>
+    
+    <script>
+        window.addEventListener('load', () => {
+            if (!navigator.onLine) {
+                window.location.href = 'offline.html';
+            }
+        });
+    </script>
+
+    <script>
+        document.getElementById('darkModeToggle').addEventListener('click', function() {
+            document.body.classList.toggle('dark-mode');
+            document.querySelector('.container-fluid').classList.toggle('dark-mode');
+            document.querySelector('.collapse').classList.toggle('dark-mode');
+            document.querySelectorAll('.heading').forEach(el => el.classList.toggle('dark-mode'));
+            document.querySelector('.carousel-control-prev-icon').classList.toggle('dark-mode');
+            document.querySelector('.carousel-control-next-icon').classList.toggle('dark-mode');
+            document.querySelector('.dropdown-menu').classList.toggle('dark-mode');
+           
+        });
+    </script>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+
+
+    <script src="js/nav.js"></script>
+    <script src="js/main.js"></script>
+    <script src="sw.js"></script>
+
+</body>
+
+</html>

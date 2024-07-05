@@ -1,0 +1,77 @@
+/* Center the container horizontally and vertically */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 50vh; /* Adjust this value for desired vertical centering */
+    background-color: #b3e232; /* Set a background color for the container */
+  }
+
+  .containerr {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 12vh; /* Adjust this value for desired vertical centering */
+   background-color: #000000;/* Set a background color for the container */
+  }
+
+  .textt-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+  }
+  
+  /* Style the currency divs */
+  .currency {
+    display: flex;
+    align-items: center;
+    margin: 10px;
+  }
+  
+  /* Style the input elements */
+  input[type="number"] {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  /* Style the select elements */
+  select {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-left: 5px;
+  }
+  
+  /* Style the swap-rate-container */
+  .swap-rate-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+  }
+  
+  /* Style the rate and button */
+  .rate {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .btn {
+    padding: 10px 20px;
+    background-color: #007bff; /* Set your desired button background color */
+    color: #fff; /* Set your desired button text color */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  /* Style the selected option */
+  select option[selected] {
+    font-weight: bold;
+  }
+  

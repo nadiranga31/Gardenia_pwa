@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Gardenia</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+    <meta name="theme-color" content="#317EFB"/>
+
+    <link rel="manifest" href="manifest.json">
+
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    
+
+
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <script src="js/offline.js"></script>
+    <!-- Template Stylesheet -->
+    
+    <link href="offline.css" rel="stylesheet">
+    
+    <script src="js/register-service-worker.js"></script>
+    
+</head>
+<body>
+    <h1>No internet</h1>
+    <p>It looks like you're offline. Please check your internet connection and try again.</p>
+    <img src="img/offline.png" alt="Offline" width="200">
+    <button class="reload-button" onclick="reloadPage()">Reload</button>
+    <script src="sw.js"></script>
+  
+  </body>
+  </html>

@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="theme-color" content="#317EFB"/>
+    
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+   
+    <title>Gardenia</title>
+  
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" 
+    integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <!-- css -->
+    
+    <link rel="stylesheet" href="css/product.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/api.css">
+    <link rel="manifest" href="manifest.json">
+
+    <style>
+      /* Dark Mode Styles */
+body.dark-mode {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.navbar.dark-mode, .footer.dark-mode {
+  background-color: #ffffff;
+  color: #ffffff;
+}
+
+.products.dark-mode, .cart.dark-mode {
+  background-color: #1f1f1f;
+  color: #e0e0e0;
+}
+
+.bg-body-tertiary.dark-mode {
+  background-color: #ffffff;
+  color: #e0e0e0;
+}
+
+.btn.dark-mode {
+  background-color: #388e3c;
+  color: #e0e0e0;
+}
+
+.text-body.dark-mode {
+  color: #e0e0e0;
+}
+
+#darkModeToggle {
+  margin-right: 7rem;
+  border-radius: 50%; /* Make the button round */
+  background-color: #ffffff; /* White background color */
+  color: #000000; /* Black text color */
+/* Optional: Black border */
+  width: 35px; /* Adjust width to make it round */
+  height: 38px; /* Adjust height to make it round */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px; /* Adjust font size as needed */
+  transition: background-color 0.3s, color 0.3s; /* Smooth transition for color change */
+}
+
+#darkModeToggle:hover {
+  background-color: #000000; /* Background color on hover */
+  color: #ffffff; /* Text color on hover */
+}
+
+
+    </style>
+
+</head>
+<body>
+    
+    
+    <nav class="navbar">
+        <div class="navbar-center">
+           <div class="cart-btn">
+               <span class="nav-icon">
+                   <i class="fas fa-cart-plus"></i>
+               </span> 
+               <div class="cart-items">0</div>
+            </div>
+            <div class="back-button">
+              <a href="index.html">Back to Home</a>
+              
+          </div>
+        </div>
+        <button id="darkModeToggle" class="btn btn-dark ms-2">
+          <i id="darkModeIcon" class="fas fa-sun"></i>
+      </button>
+        
+    </nav>
+    
+    
+    <section class="products">
+        <div class="section-title">
+            <h2>Our Products</h2>
+        </div>
+        <!-- using json stored some product items -->
+        <div class="products-center">
+
+         
+            
+        </div>
+        
+    </section> 
+
+  
+    
+        <div class="cart-overlay">
+            <div class="cart">
+               <span class="close-cart">
+                   <i class="fas fa-window-close"></i>
+               </span> 
+               <h2>Your cart</h2>
+               <div class="cart-content">
+                   
+               </div>
+                <div class="cart-footer">
+                    <h3>your total: Rs: <span class="cart-total">0</span></h3>
+                    <button class="clear-cart banner-btn">clear cart</button>
+                </div>
+            </div>
+        </div>
+
+        <footer class="bg-body-tertiary text-center">
+          <!-- Grid container -->
+          <div class="containerr" >
+            <!-- Section: Social media -->
+            <section class="mb-4" >
+              <!-- Facebook -->
+              <a
+              data-mdb-ripple-init
+                class="btn text-white btn-floating m-1"
+                style="background-color: #3b5998;"
+                href="#!"
+                role="button"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+        
+              <!-- Twitter -->
+              <a
+                data-mdb-ripple-init
+                class="btn text-white btn-floating m-1"
+                style="background-color: #55acee;"
+                href="#!"
+                role="button"
+                ><i class="fab fa-twitter"></i
+              ></a>
+        
+              <!-- Google -->
+              <a
+                data-mdb-ripple-init
+                class="btn text-white btn-floating m-1"
+                style="background-color: #dd4b39;"
+                href="#!"
+                role="button"
+                ><i class="fab fa-google"></i
+              ></a>
+        
+              <!-- Instagram -->
+              <a
+                data-mdb-ripple-init
+                class="btn text-white btn-floating m-1"
+                style="background-color: #ac2bac;"
+                href="#!"
+                role="button"
+                ><i class="fab fa-instagram"></i
+              ></a>
+        
+              <!-- Linkedin -->
+              <a
+                data-mdb-ripple-init
+                class="btn text-white btn-floating m-1"
+                style="background-color: #0082ca;"
+                href="#!"
+                role="button"
+                ><i class="fab fa-linkedin-in"></i
+              ></a>
+              <!-- Github -->
+              <a
+                data-mdb-ripple-init
+                class="btn text-white btn-floating m-1"
+                style="background-color: #333333;"
+                href="#!"
+                role="button"
+                ><i class="fab fa-github"></i
+              ></a>
+            </section>
+            <!-- Section: Social media -->
+          </div>
+          <!-- Grid container -->
+        
+          <!-- Copyright -->
+          <div class="textt-center p-3" style="background-color: rgba(0, 0, 0, 0.05); margin-bottom :30px;">
+            © 2020 Copyright:
+            <a class="text-body"  style="color:#48d96c;" href="">Gardenia.com</a>
+          </div>
+          <!-- Copyright -->
+        </footer> 
+  
+
+        
+        <script>
+            window.addEventListener('load', () => {
+        if (!navigator.onLine) {
+            window.location.href = 'offline.html';
+        }
+        });
+        </script>
+
+
+        <script>
+          document.getElementById('darkModeToggle').addEventListener('click', function() {
+              document.body.classList.toggle('dark-mode');
+              document.querySelector('.navbar').classList.toggle('dark-mode');
+              document.querySelector('.footer').classList.toggle('dark-mode');
+              document.querySelector('.products').classList.toggle('dark-mode');
+              document.querySelector('.cart').classList.toggle('dark-mode');
+              document.querySelector('.bg-body-tertiary').classList.toggle('dark-mode');
+              document.querySelectorAll('.btn').forEach(el => el.classList.toggle('dark-mode'));
+              document.querySelectorAll('.text-body').forEach(el => el.classList.toggle('dark-mode'));
+            
+              
+              
+          });
+      </script>
+      
+     
+    
+   <script src="js/app.js"></script> 
+   <script src="js/nav.js"></script>
+   <script src="js/scriptt.js"></script>
+   <script src="js/register-service-worker.js"></script>
+  
+</body>
+</html>
+

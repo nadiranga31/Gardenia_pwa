@@ -1,0 +1,85 @@
+/* @media (prefers-color-scheme: dark) {body{ background: black; color: ghostwhite; } strong{ color: powderblue; }}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    text-align: center;
+    padding: 50px;
+  }
+
+  h1 {
+    color: #333;
+  }
+
+  p {
+    color: #666;
+  } */
+  /* Customize the background and text colors for a tea shop theme */
+@media (prefers-color-scheme: dark) {
+  body {
+    background: #221f1f; /* Deep brown background for dark mode */
+    color: #ffd700; /* Gold text color for dark mode */
+  }
+  strong {
+    color: #FFA500; /* Orange for strong emphasis in dark mode */
+  }
+}
+
+body {
+  font-family: "Georgia", serif; /* Use a serif font for a classic tea shop feel */
+  background-color: #f7f3ec; /* Light beige background color */
+  text-align: center;
+  padding: 50px;
+}
+
+h1 {
+  color: #000000; /* Dark brown for headings */
+  font-size: 36px; /* Larger font size for headings */
+}
+
+p {
+  color: #000000; /* Darker brown for regular text */
+  font-size: 20px; /* Slightly larger font size for text */
+}
+
+/* Style the reload button to fit the tea shop theme */
+.reload-button {
+  background-color: #0d6efd; /* Light brown background for the button */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 18px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.reload-button:hover {
+  background-color: #48d96c; /* Darker brown on hover for the button */
+}
+
+/* Center the image */
+img {
+  display: block;
+  margin: 0 auto;
+  margin-top: 20px; /* Add some top margin to the image */
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 28px; /* Reduce heading font size for smaller screens */
+  }
+
+  p {
+    font-size: 16px; /* Reduce text font size for smaller screens */
+  }
+
+  .reload-button {
+    font-size: 16px; /* Reduce button font size for smaller screens */
+  }
+
+  img {
+    width: 80%; /* Make the image responsive by setting its width to a percentage */
+  }
+}

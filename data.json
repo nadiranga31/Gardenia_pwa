@@ -1,0 +1,66 @@
+[
+    {
+        "id": 1,
+        "title": "Chicken Kottu",
+        "summary": "A delicious blend of chopped roti, chicken, and spices.",
+        "description": "Chicken Kottu is a popular street food in Sri Lanka, made by stir-frying chopped roti with chicken, vegetables, and spices.",
+        "price": "₨500",
+        "image": "img/p1.jpg"
+    },
+    {
+        "id": 2,
+        "title": "Lamprais",
+        "summary": "Dutch-influenced Sri Lankan dish.",
+        "description": "Lamprais consists of rice, mixed meats, and sambol chili sauce, wrapped in a banana leaf and baked.",
+        "price": "₨750",
+        "image": "img/p2.jpg"
+    },
+    {
+        "id": 3,
+        "title": "Red Pork Curry",
+        "summary": "Rich and spicy pork curry.",
+        "description": "Red Pork Curry is made with tender pork, cooked in a mixture of spices and chili, providing a hearty meal.",
+        "price": "₨650",
+        "image": "img/p3.jpg"
+    },
+    {
+        "id": 4,
+        "title": "High Tea Package",
+        "summary": "Elegant high tea for two.",
+        "description": "Our High Tea Package includes a selection of fine teas, sandwiches, and pastries, perfect for an afternoon indulgence.",
+        "price": "₨1,200",
+        "image": "img/p4.jpg"
+    },
+    {
+        "id": 5,
+        "title": "Thai Family Meal",
+        "summary": "Family-sized meal serving traditional Thai dishes.",
+        "description": "This family meal includes Thai green curry, pad Thai, spring rolls, and mango sticky rice, suitable for 2, 4, or 6 people.",
+        "price": "₨2,200",
+        "image": "img/p8.jpg"
+    },
+    {
+        "id": 6,
+        "title": "Grilled Chicken Pizza",
+        "summary": "Stone-baked pizza with grilled chicken toppings.",
+        "description": "Enjoy our Grilled Chicken Pizza with a crispy crust, topped with grilled chicken, fresh mozzarella, and a hint of garlic and herbs.",
+        "price": "₨950",
+        "image": "img/p7.jpg"
+    },
+    {
+        "id": 7,
+        "title": "Mocha Chocolate Cake",
+        "summary": "Rich mocha-infused chocolate cake.",
+        "description": "Our Mocha Chocolate Cake is a decadent dessert, combining rich chocolate and bold espresso flavors, topped with mocha ganache.",
+        "price": "₨1,100",
+        "image": "img/p6.jpg"
+    },
+    {
+        "id": 8,
+        "title": "Pot Biriyani – Chicken",
+        "summary": "Aromatic chicken biriyani cooked in a pot.",
+        "description": "Our Chicken Pot Biriyani is slow-cooked with layers of marinated chicken, basmati rice, and traditional spices, served with raita and boiled egg.",
+        "price": "₨1,300",
+        "image": "img/p5.jpg"
+    }
+]

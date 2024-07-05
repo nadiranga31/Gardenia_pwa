@@ -1,0 +1,132 @@
+{
+  "items": [
+    {
+      "sys": { "id": "1" },
+      "fields": {
+        "title": "Chicken Kottu",
+        "price":2500,
+        "image": { "fields": { "file": { "url": "./img/p1.jpg" } } }
+      }
+    },
+    {
+      "sys": { "id": "2" },
+      "fields": {
+        "title": "Lamprais ",
+        "price": 2500,
+        "image": { "fields": { "file": { "url": "./img/p2.jpg" } } }
+      }
+    },
+    {
+      "sys": { "id": "3" },
+      "fields": {
+        "title": "Pot Biriyani – Chicken",
+        "price":5200,
+        "image": { "fields": { "file": { "url": "./img/p5.jpg" } } }
+      }
+    },
+    {
+      "sys": { "id": "4" },
+      "fields": {
+        "title": "Grilled Chicken Pizza",
+        "price": 3900,
+        "image": { "fields": { "file": { "url": "./img/p7.jpg" } } }
+      }
+    },
+    {
+      "sys": { "id": "5" },
+      "fields": {
+        "title": "Thai Family Meal",
+        "price":7700,
+        "image": { "fields": { "file": { "url": "./img/p8.jpg" } } }
+      }
+    },
+    {
+      "sys": { "id": "6" },
+      "fields": {
+        "title": "Sri Lankan Noodle Family Meal",
+        "price": 3800,
+        "image": { "fields": { "file": { "url": "./img/p9.jpg" } } }
+      }
+    },
+    {
+      "sys": { "id": "7" },
+      "fields": {
+        "title": "String Hopper Family Meal ",
+        "price": 3800,
+        "image": { "fields": { "file": { "url": "./img/p10.jpg" } } }
+      }
+    },
+    {
+      "sys": { "id": "8" },
+      "fields": {
+        "title": "Yellow Rice Set Family Meal",
+        "price": 5200,
+        "image": { "fields": { "file": { "url": "./img/p11.jpg" } } }
+      }
+    },
+    {
+      "sys": {
+        "id": "9"
+      },
+      "fields": {
+        "title": "Sri Lankan Godamba Roti Family Meal ",
+        "price": 3800,
+        "image": {
+          "fields": {
+            "file": {
+              "url": "./img/p12.jpg"
+            }
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "id": "10"
+      },
+      "fields": {
+        "title": "Bite Combo",
+        "price": 10200,
+        "image": {
+          "fields": {
+            "file": {
+              "url": "./img/p13.jpg"
+            }
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "id": "11"
+      },
+      "fields": {
+        "title": "High Tea Package (4 Pax)",
+        "price": 16500,
+        "image": {
+          "fields": {
+            "file": {
+              "url": "./img/p14.jpg"
+            }
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "id": "12"
+      },
+      "fields": {
+        "title": "Four Meats Pizza",
+        "price": 5400,
+        "image": {
+          "fields": {
+            "file": {
+              "url": "./img/p15.jpg"
+            }
+          }
+        }
+      }
+    }
+  ]
+}

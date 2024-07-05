@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Gardenia</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+    <meta name="theme-color" content="#317EFB" />
+    <link rel="manifest" href="manifest.json">
+
+
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+ 
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Playfair+Display:wght@700;900&display=swap"
+        rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <script src="js/register-service-worker.js"></script>
+    <style>
+
+        /* Adjust image sizes */
+.photo-placeholder img,.culinary-experience-section img {
+    width: 500px;
+    height: auto;
+    border-radius: 8px;
+   
+}
+
+.carousel-inner img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.detail-view img {
+    max-width: 250px;
+    height: auto;
+    margin-bottom: 15px;
+    border-radius: 8px;
+}
+
+
+    .heading
+    {
+    margin-top: 0;
+    margin-bottom: .5rem;
+    font-family: "Playfair Display", serif;
+    font-weight: 700;
+    line-height: 1.2;
+  
+    font-size: 2rem;
+        }
+
+
+        /* Dark Mode Styles */
+        body.dark-mode {
+            background-color: #ffffff;
+            color: #000000;
+        }
+        .container-fluid.dark-mode, .collapse.dark-mode {
+            background-color: #ffffff;
+        }
+        .carousel-caption.dark-mode {
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+        .heading.dark-mode {
+            color: #000000;
+                
+            }
+        .card.dark-mode, .product-item.dark-mode, .modal-content.dark-mode {
+            background-color: #1f1f1f;
+            color: #e0e0e0;
+        }
+        .footer.dark-mode, .copyright.dark-mode {
+            background-color: #1f1f1f;
+            color: #e0e0e0;
+        }
+        .btn-primary.dark-mode, .btn-outline-primary.dark-mode:hover {
+            background-color: #388e3c;
+            color: #e0e0e0;
+        }
+        .carousel-control-prev-icon.dark-mode, .carousel-control-next-icon.dark-mode {
+            background-color: #212121;
+            border: 15px solid #212121;
+        }
+        .dropdown-menu.dark-mode {
+            background-color: #1f1f1f;
+            color: #e0e0e0;
+        }
+        #spinner.dark-mode {
+            background-color: #1f1f1f;
+        }
+
+        #darkModeToggle {
+            border-radius: 50%; /* Make the button round */
+            background-color: #ffffff; /* White background color */
+            color: #000000; /* Black text color */
+       /* Optional: Black border */
+            width: 25px; /* Adjust width to make it round */
+            height: 25px; /* Adjust height to make it round */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px; /* Adjust font size as needed */
+            transition: background-color 0.3s, color 0.3s; /* Smooth transition for color change */
+        }
+    
+        #darkModeToggle:hover {
+            background-color: #000000; /* Background color on hover */
+            color: #ffffff; /* Text color on hover */
+        }
+
+/* Scrollable List */
+.scrollable-list {
+    max-height: 200px;
+    overflow-y: auto;
+    border: 1px solid #ddd;
+    padding: 10px;
+    background-color: #000000;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+}
+
+.scrollable-item {
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+.scrollable-item:hover {
+    background-color: #868585;
+    transform: scale(1.02);
+}
+
+.detail-view {
+    display: none;
+    padding: 20px;
+   
+    border-radius: 8px;
+    background-color: #000000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+    font-family: 'Open Sans', sans-serif;
+    color: #ffffff;
+}
+
+.detail-view.active {
+    display: block;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.detail-view ul {
+    list-style: none;
+    padding: 0;
+}
+
+.detail-view li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    transition: transform 0.3s;
+}
+
+.detail-view li:hover {
+    transform: scale(1.05);
+}
+
+.detail-view img {
+    max-width: 100px;
+    height: auto;
+    margin-right: 10px;
+    border-radius: 8px;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+       
+    </style>
+   
+</head>
+
+
+<body>
+
+    <div id="spinner"
+        class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-border text-primary" role="status" style="width: 3rem; height: 3rem;"></div>
+    </div>
+
+
+
+
+    <div class="container-fluid sticky-top">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg bg-white navbar-light py-2 py-lg-0">
+                <a href="index.html" class="navbar-brand">
+                    <img class="img-fluid" src="img/logo.png" alt="Logo">
+                </a>
+                <button type="button" class="navbar-toggler ms-auto me-0" data-bs-toggle="collapse"
+                    data-bs-target="#navbarCollapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <div class="navbar-nav ms-auto">
+                        <a href="index.html" class="nav-item nav-link">Home</a>
+                        <a href="about.html" class="nav-item nav-link active">About</a>
+                        <a href="product.html" class="nav-item nav-link">Menu</a>
+                        <a href="contact.html" class="nav-item nav-link">Contact</a>
+                        <a href="store.html" class="nav-item nav-link" id="storeLink">Store</a>
+                        <li class="nav-item dropdown" id="userMenu" style="display: none;">
+                            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false">
+                                <span id="userEmail"></span>
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a href="#" id="logoutLink" class="dropdown-item">Logout</a>
+                            </div>
+                        </li>
+                        <li id="loginRegisterLink"><a href="register.html" class="nav-item nav-link">Login/Register</a>
+                        </li>
+                    </div>
+                    <button id="darkModeToggle" class="btn btn-dark ms-2">
+                        <i id="darkModeIcon" class="fas fa-sun"></i>
+                    </button>
+                </div>
+            </nav>
+        </div>
+    </div>
+
+
+
+    <div class="container-fluid page-header py-5  wow fadeIn" data-wow-delay="0.1s">
+        <div class="container text-center py-5">
+            <h3 class="display-2 text-dark  animated slideInDown">About Us</h3>
+
+        </div>
+    </div>
+
+    <!-- About Section -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="row g-5 align-items-center">
+                <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
+                    <p class="heading mb-4">Delicious Meals, Delivered Fast</p>
+                    <p class=" mb-4">Explore a wide range of cuisines from our diverse menu, crafted to satisfy every
+                        palate. Our quick delivery ensures your food arrives hot and fresh, right at your doorstep.</p>
+                    <div class="photo-placeholder">
+                        <img src="img/about1.jpg" alt="About Us Image">
+                    </div>
+                </div>
+                <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
+                    <div class="photo-placeholder">
+                        <img src="img/about2.jpg" alt="Our Kitchen">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid py-5 my-5">
+        <div class="container py-5">
+            <div class="section-title text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
+                <p class="fs-5 fw-medium fst-italic text-primary">Our Top Selling Items</p>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="scrollable-list">
+                        <div class="scrollable-item" data-id="1">Sri Lankan Food</div>
+                        <div class="scrollable-item" data-id="2">Indian Food</div>
+                        <div class="scrollable-item" data-id="3">Chinese</div>
+                        <div class="scrollable-item" data-id="4">Italian</div>
+                        <div class="scrollable-item" data-id="5">Pizza</div>
+                        <div class="scrollable-item" data-id="6">Fast Food</div>
+                        <div class="scrollable-item" data-id="7">Pastry & Cakes</div>
+                        <div class="scrollable-item" data-id="8">Drinks</div>
+                    </div>
+                </div>
+                <div class="col-md-8">
+                    <div class="detail-view" id="detail-view-1">
+                        <ul>
+                            <li>
+                                <img src="img/p2.jpg" alt="Lamprais" class="img-fluid">
+                                Lamprais - Rs:1000
+                            </li>
+                            <li>
+                                <img src="img/Rice_and_Curry.jpg" alt="Rice and Curry" class="img-fluid">
+                                Rice and Curry - Rs:1000
+                            </li>
+                            <li>
+                                <img src="img/p1.jpg" alt="Kottu Roti" class="img-fluid">
+                                Kottu Roti - Rs:1000
+                            </li>
+                            <li>
+                                <img src="img/hoppers.webp" alt="Hoppers" class="img-fluid">
+                                Hoppers - Rs:1000
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="detail-view" id="detail-view-2">
+                        <ul>
+                            <li>
+                                <img src="img/butter_chicken.jpg" alt="Butter Chicken" class="img-fluid">
+                                Butter Chicken - Rs:1000
+                            </li>
+                            <li>
+                                <img src="img/biryani.jpeg" alt="Biryani" class="img-fluid">
+                                Biryani - Rs:1000
+                            </li>
+                            <li>
+                                <img src="img/naan.jpg" alt="Naan" class="img-fluid">
+                                Naan - Rs:1000
+                            </li>
+                            <li>
+                                <img src="img/samosa.jpg" alt="Samosas" class="img-fluid">
+                                Samosas - Rs:1000
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="detail-view" id="detail-view-3">
+                        <ul>
+                            <li>
+                                <img src="img/sweet_sour_chicken.webp" alt="Sweet and Sour Chicken" class="img-fluid" style="max-width: 100px; height: auto; margin-right: 10px;">
+                                Sweet and Sour Chicken - Rs:1000
+                            </li>
+                            <li>
+                                <img src="img/fried_rice.jpg" alt="Fried Rice" class="img-fluid" style="max-width: 100px; height: auto; margin-right: 10px;">
+                                Fried Rice - Rs:1000
+                            </li>
+                            <li>
+                                <img src="img/spring_rolls.jpg" alt="Spring Rolls" class="img-fluid" style="max-width: 100px; height: auto; margin-right: 10px;">
+                                Spring Rolls -Rs:1000
+                            </li>
+                            <li>
+                                <img src="img/kung_pao_chicken.webp" alt="Kung Pao Chicken" class="img-fluid" style="max-width: 100px; height: auto; margin-right: 10px;">
+                                Kung Pao Chicken - Rs:1000
+                            </li>
+                        </ul>
+                    </div>
+                  
+                        <div class="detail-view" id="detail-view-4">
+                            <ul>
+                                <li>
+                                    <img src="img/pasta.jpeg" alt="Pasta" class="img-fluid" style="max-width: 100px; height: auto; margin-right: 10px;">
+                                    Pasta -Rs:1000
+                                </li>
+                                <li>
+                                    <img src="img/lasagna.jpeg" alt="Lasagna" class="img-fluid" style="max-width: 100px; height: auto; margin-right: 10px;">
+                                    Lasagna - Rs:1000
+                                </li>
+                                <li>
+                                    <img src="img/risotto.jpg" alt="Risotto" class="img-fluid" style="max-width: 100px; height: auto; margin-right: 10px;">
+                                    Risotto - Rs:1000
+                                </li>
+                                <li>
+                                    <img src="img/bruschetta.jpg" alt="Bruschetta" class="img-fluid" style="max-width: 100px; height: auto; margin-right: 10px;">
+                                    Bruschetta -Rs:1000
+                                </li>
+                            </ul>
+                        </div>
+                        
+                  
+                        <div class="detail-view" id="detail-view-5">
+                             <ul>
+                                <li>
+                                    <img src="img/margherita.jpg" alt="Margherita" class="img-fluid" style="max-width: 100px; height: auto; margin-right: 10px;">
+                                    Margherita - Rs:1000
+                                </li>
+                                <li>
+                                    <img src="img/pepperoni.jpg" alt="Pepperoni" class="img-fluid" style="max-width: 100px; height: auto; margin-right: 10px;">
+                                    Pepperoni -Rs:1000
+                                </li>
+                                <li>
+                                    <img src="img/veggie.jpg" alt="Veggie" class="img-fluid" style="max-width: 100px; height: auto; margin-right: 10px;">
+                                    Veggie - Rs:1000
+                                </li>
+                                <li>
+                                    <img src="img/meat_lovers.jpg" alt="Meat Lovers" class="img-fluid" style="max-width: 100px; height: auto; margin-right: 10px;">
+                                    Meat Lovers -Rs:1000
+                                </li>
+                            </ul>
+                        </div>
+                        
+                   
+                    <div class="detail-view" id="detail-view-6">
+                        <ul>
+                            <li>
+                                <img src="img/burger.webp" alt="Burgers" class="img-fluid" style="max-width: 100px; height: auto; margin-right: 10px;">
+                                Burgers - Rs:1000
+                            </li>
+                            <li>
+                                <img src="img/fries.jpg" alt="Fries" class="img-fluid" style="max-width: 100px; height: auto; margin-right: 10px;">
+                                Fries - Rs:1000
+                            </li>
+                            <li>
+                                <img src="img/chicken_wings.jpg" alt="Chicken Wings" class="img-fluid" style="max-width: 100px; height: auto; margin-right: 10px;">
+                                Chicken Wings - Rs:1000
+                            </li>
+                            <li>
+                                <img src="img/hot_dog.jpg" alt="Hot Dogs" class="img-fluid" style="max-width: 100px; height: auto; margin-right: 10px;">
+                                Hot Dogs - Rs:1000
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="detail-view" id="detail-view-7">
+                      
+                        <ul>
+                            <li>
+                                <img src="img/chocolate_cake.jpg" alt="Chocolate Cake" class="img-fluid" style="max-width: 100px; height: auto; margin-right: 10px;">
+                                Chocolate Cake - Rs:1000
+                            <li>
+                                <img src="img/croissant.jpg" alt="Croissants" class="img-fluid" style="max-width: 100px; height: auto; margin-right: 10px;">
+                                Croissants - Rs:1000
+                            </li>
+                            <li>
+                                <img src="img/cupcake.webp" alt="Cupcakes" class="img-fluid" style="max-width: 100px; height: auto; margin-right: 10px;">
+                                Cupcakes -Rs:1000
+                            </li>
+                            <li>
+                                <img src="img/fruit_tart.jpg" alt="Fruit Tarts" class="img-fluid" style="max-width: 100px; height: auto; margin-right: 10px;">
+                                Fruit Tarts - Rs:1000
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="detail-view" id="detail-view-8">
+                        
+                        <ul>
+                            <li>
+                                <img src="img/fresh_juice.jpg" alt="Fresh Juices" class="img-fluid" style="max-width: 100px; height: auto; margin-right: 10px;">
+                                Fresh Juices - Rs:1000
+                            </li>
+                            <li>
+                                <img src="img/cocktails.jpg" alt="Cocktails" class="img-fluid" style="max-width: 100px; height: auto; margin-right: 10px;">
+                                Cocktails - Rs:1000
+                            </li>
+                            <li>
+                                <img src="img/smoothies.jpg" alt="Smoothies" class="img-fluid" style="max-width: 100px; height: auto; margin-right: 10px;">
+                                Smoothies - Rs:1000
+                            </li>
+                            <li>
+                                <img src="img/tea_coffee.jpg" alt="Tea & Coffee" class="img-fluid" style="max-width: 100px; height: auto; margin-right: 10px;">
+                                Tea & Coffee -Rs:1000
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <section class="history-section">
+            <p class="heading">Our Story</p>
+            <p>Founded in 2010, Gardenia has grown from a cozy little restaurant in the heart of downtown to a community
+                staple known for its eclectic selection of teas sourced from across the globe. Our mission is to bring
+                the art of tea to everyday life, making fine foods accessible to all.</p>
+            <img src="" alt="" class="responsive">
+        </section>
+
+        <section class="mission-section">
+            <p class="heading">Our Mission</p>
+            <p>At Gardenia Restaurant, we are dedicated to providing a memorable dining experience for every guest.
+                Whether you're a gourmet enthusiast or simply enjoy a good meal, we aim to delight your senses with our
+                diverse menu, featuring local and international cuisines. Sustainability and active community
+                involvement are fundamental to our ethos, ensuring that while we serve you with the best, we also give
+                back to the environment and our community.</p>
+        </section>
+
+        <section class="culinary-experience-section">
+            <p class="heading">Culinary Experience</p>
+            <p>Our menu goes beyond traditional offerings, featuring a rich array of gourmet dishes, signature meals,
+                and artisanal desserts, all crafted to complement your dining experience. Each dish is meticulously
+                prepared with locally sourced ingredients, supporting our community's farmers and producers, and
+                ensuring freshness and quality that you can taste in every bite.</p>
+            <img src="img/about4.jpg" alt="Gardenia Restaurant Culinary Experience" class="responsive">
+        </section>
+
+
+        <section class="meet-the-team-section mt-4 mb-4">
+            <p class="heading">Meet the Team</p>
+            <p>Behind every meal at Gardenia Restaurant is a team of dedicated professionals. Meet our talented chefs,
+                attentive servers, and creative culinary staff who make every visit memorable. Their passion and
+                expertise in the culinary arts ensure that every dish served is a testament to our commitment to
+                excellence.</p>
+            <!-- Carousel wrapper -->
+            <div id="carouselMultiItemExample" data-mdb-carousel-init class="carousel slide carousel-dark text-center"
+                data-mdb-ride="carousel">
+                <!-- Controls -->
+
+                <!-- Inner -->
+                <div class="carousel-inner py-4">
+                    <!-- Single item -->
+                    <div class="carousel-item active">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-4">
+                                    <div class="card">
+                                        <img src="img/chef1.jpeg" class="card-img-top" alt="Waterfall" />
+
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-4 d-none d-lg-block">
+                                    <div class="card">
+                                        <img src="img/chef2.jpeg" class="card-img-top" alt="Sunset Over the Sea" />
+
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-4 d-none d-lg-block">
+                                    <div class="card">
+                                        <img src="img/chef3.jpg" class="card-img-top" alt="Sunset over the Sea" />
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+                <!-- Inner -->
+            </div>
+            <!-- Carousel wrapper -->
+        </section>
+
+        
+        
+   
+
+
+    <footer class="bg-body-tertiary text-center">
+      <!-- Grid container -->
+      <div class="container p-4 pb-0">
+        <!-- Section: Social media -->
+        <section class="mb-4">
+          <!-- Facebook -->
+          <a
+          data-mdb-ripple-init
+            class="btn text-white btn-floating m-1"
+            style="background-color: #3b5998;"
+            href="#!"
+            role="button"
+            ><i class="fab fa-facebook-f"></i
+          ></a>
+    
+          <!-- Twitter -->
+          <a
+            data-mdb-ripple-init
+            class="btn text-white btn-floating m-1"
+            style="background-color: #55acee;"
+            href="#!"
+            role="button"
+            ><i class="fab fa-twitter"></i
+          ></a>
+    
+          <!-- Google -->
+          <a
+            data-mdb-ripple-init
+            class="btn text-white btn-floating m-1"
+            style="background-color: #dd4b39;"
+            href="#!"
+            role="button"
+            ><i class="fab fa-google"></i
+          ></a>
+    
+          <!-- Instagram -->
+          <a
+            data-mdb-ripple-init
+            class="btn text-white btn-floating m-1"
+            style="background-color: #ac2bac;"
+            href="#!"
+            role="button"
+            ><i class="fab fa-instagram"></i
+          ></a>
+    
+          <!-- Linkedin -->
+          <a
+            data-mdb-ripple-init
+            class="btn text-white btn-floating m-1"
+            style="background-color: #0082ca;"
+            href="#!"
+            role="button"
+            ><i class="fab fa-linkedin-in"></i
+          ></a>
+          <!-- Github -->
+          <a
+            data-mdb-ripple-init
+            class="btn text-white btn-floating m-1"
+            style="background-color: #333333;"
+            href="#!"
+            role="button"
+            ><i class="fab fa-github"></i
+          ></a>
+        </section>
+        <!-- Section: Social media -->
+      </div>
+      <!-- Grid container -->
+    
+      <!-- Copyright -->
+      <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.05);">
+        © 2020 Copyright:
+        <a class="text-body" href="https://mdbootstrap.com/">Gardenia.com</a>
+      </div>
+      <!-- Copyright -->
+    </footer>
+
+
+
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top"><i
+            class="bi bi-arrow-up"></i></a>
+   
+    <script>
+        window.addEventListener('load', () => {
+            if (!navigator.onLine) {
+
+                window.location.href = 'offline.html';
+
+            }
+
+        });
+    </script>
+
+    <script>
+        const scrollableItems = document.querySelectorAll('.scrollable-item');
+        const detailViews = document.querySelectorAll('.detail-view');
+        
+        scrollableItems.forEach(item => {
+            item.addEventListener('click', () => {
+                const id = item.getAttribute('data-id');
+        
+                // Hide all detail views
+                detailViews.forEach(detail => detail.classList.remove('active'));
+        
+                // Show selected detail view
+                document.getElementById(`detail-view-${id}`).classList.add('active');
+            });
+        });
+        
+        
+    </script>
+    
+
+    <script>
+        document.getElementById('darkModeToggle').addEventListener('click', function() {
+            document.body.classList.toggle('dark-mode');
+            document.querySelector('.container-fluid').classList.toggle('dark-mode');
+            document.querySelector('.collapse').classList.toggle('dark-mode');
+            document.querySelector('.carousel-caption').classList.toggle('dark-mode');
+            document.querySelectorAll('.heading').forEach(el => el.classList.toggle('dark-mode'));
+            document.querySelectorAll('.card').forEach(el => el.classList.toggle('dark-mode'));
+            document.querySelectorAll('.product-item').forEach(el => el.classList.toggle('dark-mode'));
+            document.querySelectorAll('.modal-content').forEach(el => el.classList.toggle('dark-mode'));
+            document.querySelector('.footer').classList.toggle('dark-mode');
+            document.querySelector('.copyright').classList.toggle('dark-mode');
+            document.querySelectorAll('.btn-primary').forEach(el => el.classList.toggle('dark-mode'));
+            document.querySelectorAll('.btn-outline-primary').forEach(el => el.classList.toggle('dark-mode'));
+            document.querySelector('.carousel-control-prev-icon').classList.toggle('dark-mode');
+            document.querySelector('.carousel-control-next-icon').classList.toggle('dark-mode');
+            document.querySelector('.dropdown-menu').classList.toggle('dark-mode');
+            document.getElementById('spinner').classList.toggle('dark-mode');
+    
+           
+        });
+    </script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+
+    <script src="js/main.js"></script>
+    <script src="js/nav.js"></script>
+</body>
+
+</html>

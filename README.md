@@ -1,0 +1,2 @@
+# Tea-House
+The Tea House website is designed to offer a delightful tea-drinking experience, providing information, resources, and services to tea enthusiasts. It includes six screens, each with a specific purpose. The website is built with responsiveness in mind, ensuring it adapts well to various screen sizes, orientations, and resolutions. It also works offline, displaying fallback content when accessing online data sources is not possible.
